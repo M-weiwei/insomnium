@@ -86,6 +86,7 @@ export const getInitialEntry = async () => {
     const hasUserLoggedInBefore = window.localStorage.getItem('hasUserLoggedInBefore');
 
     const user = await models.userSession.getOrCreate();
+    console.log('user', user);
     if (user.id) {
       const organizations = JSON.parse(localStorage.getItem(`${user.accountId}:organizations`) || '[]') as Organization[];
       const personalOrganization = findPersonalOrganization(organizations, user.accountId);

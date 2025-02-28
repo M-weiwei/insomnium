@@ -146,6 +146,10 @@ import {
   useSortable,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import {
+  restrictToVerticalAxis,
+} from '@dnd-kit/modifiers';
+
 
 export interface GrpcMessage {
   id: string;
@@ -1654,10 +1658,12 @@ export const VirtualDragList: React.FC<VirtualDragListProps> = ({
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       onDragCancel={handleDragCancel}
+      modifiers={[restrictToVerticalAxis]}
     >
       <SortableContext
         items={items.map(item => item.doc._id)}
         strategy={verticalListSortingStrategy}
+
       >
         <VirtualList
           data={items}
