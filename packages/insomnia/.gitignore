@@ -1,0 +1,7 @@
+dist
+build
+
+# Generated
+src/*.js
+src/*.js.map
+

@@ -1,0 +1,44 @@
+{
+  "json.schemas": [],
+  "files.associations": {
+    "*.db": "ndjson",
+    "*.jsonl": "ndjson",
+    "*.njson": "ndjson"
+  },
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.ts": "always"
+  },
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "cSpell.words": [
+    "apikey",
+    "Dismissable",
+    "getinsomnia",
+    "inso",
+    "libcurl",
+    "mockbin",
+    "Revalidator",
+    "svgr",
+    "Uncommited",
+    "Unpushed",
+    "unstage",
+    "Unstaged",
+    "upsert",
+    "xmark"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+}

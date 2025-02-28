@@ -1,0 +1,113 @@
+_type: export
+__export_format: 4
+__export_date: 2024-10-26T22:34:07.758Z
+__export_source: insomnia.desktop.app:v10.1.1
+resources:
+  - _id: req_5b004a6d43ef4e62a9117b9e08daa61e
+    parentId: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    modified: 1729982030396
+    created: 1729981763331
+    url: localhost:4010/echo
+    name: setNextRequest
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication: {}
+    metaSortKey: -1729981822482
+    isPrivate: false
+    pathParameters: []
+    afterResponseScript: |+
+      insomnia.execution.setNextRequest("Passing Request");
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    parentId: null
+    modified: 1729981758905
+    created: 1729981758905
+    name: test next request
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_6a0343d51ca74de7a2c73e34211354ab
+    parentId: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    modified: 1729981999436
+    created: 1729981846012
+    url: localhost:4010/echo
+    name: Failing Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication: {}
+    preRequestScript: |-
+      insomnia.test('Failing test', () => {
+        insomnia.expect(true).to.eql(false);
+      });
+    metaSortKey: -1729981763231
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_704fcb5bf8e047cbaee4f8ca23a97249
+    parentId: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    modified: 1729982010136
+    created: 1729981822432
+    url: localhost:4010/echo
+    name: Passing Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication: {}
+    preRequestScript: |-
+      insomnia.test('Passing test', () => {
+        insomnia.expect(true).to.eql(true);
+      });
+    metaSortKey: -1729981763131
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_6d416edc2e4fd8b59c75eae67c16f3b21e1e2de2
+    parentId: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    modified: 1729982036362
+    created: 1729981758906
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1729981758906
+    _type: environment
+  - _id: jar_6d416edc2e4fd8b59c75eae67c16f3b21e1e2de2
+    parentId: wrk_cbc89ea8669648b8970ae684f9ff08b8
+    modified: 1729982036362
+    created: 1729981758906
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
